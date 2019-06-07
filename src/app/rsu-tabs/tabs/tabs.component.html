@@ -1,0 +1,10 @@
+<div class="tabs__nav">
+    <a (click)="selectTab($event,tabIndex)"
+       *ngFor="let tabTitle of tabTitles; index as tabIndex"
+       [class.active]="activeTab === tabIndex">
+        {{tabTitle}}
+    </a>
+</div>
+<div #contentProjection class="tabs__content">
+    <ng-content></ng-content>
+</div>
